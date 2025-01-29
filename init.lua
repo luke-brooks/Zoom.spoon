@@ -218,6 +218,7 @@ function _getZoomInstance()
             ZOOM_APP_INSTANCE = app
             return ZOOM_APP_INSTANCE
         else
+            _printInfo('unable to retrieve Zoom App Instance')
             return nil
         end
     end
@@ -275,7 +276,7 @@ function _determineZoomState(triggerChange)
 
         if (priorityWindow ~= nil) then
             _printInfo('checking audio/video status')
-            obj.audio:status()
+            obj.audio:status() -- idk if these status calls are needed, the results are never used
             obj.video:status()
             if (triggerChange) then _change() end -- this _change is slowing down my Zoom:focus() func
         else

@@ -7,8 +7,6 @@ If you aren't familiar with  [[https://www.hammerspoon.org/][Hammerspoon]] yet, 
 
 Using this Spoon in concert with Hammerspoon, you can do things like:
 - Mute & unmute Zoom Audio or Video, even if your meeting window is buried under other apps
-- Easily track your Zoom Audio muted/unmuted status while in a meeting with a 🟢 or 🔴 indicator in the menubar of all monitors
-- The 🟢 & 🔴 icons can be clicked to toggle muted/unmuted state
 - Leave a meeting without having to search for the "Leave" button
 - Open the Chat window that is impossible to find when you are screen sharing
 - Bring the highest priority Zoom window to the forefront of all windows
@@ -32,8 +30,6 @@ Open your Hammerspoon configuration file and edit it to make use of this Spoon. 
 
 - Starts the Zoom Spoon
 - Creates a pop-up notification whenever Zoom App status changes
-- Adds the 🟢 or 🔴 icon in your menubar when in a meeting
-- Will toggle between mute and unmute if the 🟢 or 🔴 is clicked
 - Will assign the =F1= button to bring the priority Zoom window to the forefront of all windows
 - Will assign the =F2= button to toggle Zoom audio mute status
 - Will assign the =F3= button to toggle Zoom video on/off status
@@ -107,6 +103,7 @@ And finally, the last line, =spoon.Zoom:start()= starts up the Zoom spoon.
 -- Zoom Spoon Controls
 spoon.Zoom:start()
 spoon.Zoom:stop()
+spoon.Zoom:debug() -- enables hs.printf() logging in hs console
 spoon.Zoom:inMeeting()
 spoon.Zoom:leaveMeeting()
 spoon.Zoom:focus()
@@ -152,9 +149,6 @@ spoon.Zoom:setTransitionCallback(func)
 
 * Future Enhancements
 
-- Allow a user-defined mute/unmute icon instead of just built-in 🟢 & 🔴 icons
-- Add toggle status icon for video on/off
-- Improve audio mute toggle icon performance
 - Remove useless "Launch Zoom Meeting" tabs from Chrome that open whenever joining a meeting
 - Track logged in status of Zoom App
 - Track number of Participants in current meeting
