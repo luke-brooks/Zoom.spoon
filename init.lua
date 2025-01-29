@@ -84,7 +84,7 @@ Zoom_State = machine.create({
 -- Object Properties & Constants
 --------------------------------------------------------
 ]]
-ZOOM_APP_NAME = 'zoom.us'
+ZOOM_APP_NAME = 'Zoom Workspace'
 ZOOM_APP_INSTANCE = nil
 
 obj.audio = {
@@ -124,8 +124,8 @@ local MENU_ITEMS = {
         INVITE = 'Invite',
         UNMUTE_AUDIO = 'Unmute audio',
         MUTE_AUDIO = 'Mute audio',
-        START_VIDEO = 'Start Video',
-        STOP_VIDEO = 'Stop Video',
+        START_VIDEO = 'Start video',
+        STOP_VIDEO = 'Stop video',
         STOP_SHARE = 'Stop Share'
     },
     -- View Menu Items
