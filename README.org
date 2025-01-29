@@ -20,7 +20,7 @@ Using this Spoon in concert with Hammerspoon, you can do things like:
 
 2. Install the Zoom Spoon
 
-   The easiest way to do this is to download the [[https://github.com/jpf/Zoom.spoon/archive/main.zip][ZIP version of this Spoon]], unzip it, then double click the =Zoom.spoon= folder. Hammerspoon will install it for you.
+   The easiest way to do this is to download the [[https://github.com/luke-brooks/Zoom.spoon/archive/main.zip][ZIP version of this Spoon]], unzip it, remove the =-main= from the folder name, then double click the =Zoom.spoon= folder. Hammerspoon will install it for you.
 
    If you plan on modifying the Spoon and sending a pull request to this repo, then you should clone this repo into your =~/.hammerspoon/Spoons=
 
