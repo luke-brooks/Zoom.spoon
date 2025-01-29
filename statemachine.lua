@@ -4,6 +4,13 @@ machine.__index = machine
 local NONE = "none"
 local ASYNC = "async"
 
+local function unpack(t, i)
+  i = i or 1
+  if t[i] ~= nil then
+      return t[i], unpack(t, i + 1)
+  end
+end
+
 local function call_handler(handler, params)
   if handler then
     return handler(unpack(params))
