@@ -33,12 +33,6 @@ APP_STATES = {
     MEETING = 'meeting',
     SHARING = 'sharing'
 }
-function unpack(t, i) -- ltb delete
-    i = i or 1
-    if t[i] ~= nil then
-        return t[i], unpack(t, i + 1)
-    end
-end
 -- via: https://github.com/kyleconroy/lua-state-machine/
 local machine = dofile(hs.spoons.resourcePath('statemachine.lua'))
 Zoom_State = machine.create({
